@@ -1,0 +1,916 @@
+2026-02-19 11:42:41 INFO  c.A.d.DemoApplicationTests - Starting DemoApplicationTests using Java 25.0.1 with PID 46716 (started by Mayank Mishra in C:\Users\Mayank Mishra\Downloads\demo (3)\Auditing_Spring_boot)
+2026-02-19 11:42:41 INFO  c.A.d.DemoApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-02-19 11:42:42 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-19 11:42:43 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 42 ms. Found 1 JPA repository interface.
+2026-02-19 11:42:43 INFO  o.h.o.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-02-19 11:42:43 INFO  o.h.o.core - HHH000001: Hibernate ORM core version 7.2.1.Final
+2026-02-19 11:42:44 INFO  o.h.e.b.i.EnversServiceImpl - Envers integration enabled? : true
+2026-02-19 11:42:44 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-19 11:42:44 INFO  c.z.h.HikariDataSource - HikariPool-1 - Starting...
+2026-02-19 11:42:44 INFO  c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@bae5e58
+2026-02-19 11:42:44 INFO  c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+2026-02-19 11:42:44 WARN  o.h.o.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-19 11:42:44 INFO  o.h.o.c.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/prod_ready_features?useSSL=false&serverTimezone=UTC]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.44
+	Default catalog/schema: prod_ready_features/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-19 11:42:44 INFO  o.h.e.c.i.m.AuditMetadataGenerator - Adding properties for entity: com.Auditing_Tutorial.demo.entity.PostEntity
+2026-02-19 11:42:45 INFO  o.h.o.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-19 11:42:45 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-19 11:42:46 INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-19 11:42:46 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-19 11:42:46 INFO  o.s.b.a.e.w.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2026-02-19 11:42:46 INFO  c.A.d.DemoApplicationTests - Started DemoApplicationTests in 6.019 seconds (process running for 7.987)
+2026-02-19 11:42:47 ERROR c.A.d.c.i.EmployeeClientImpl - Error fetching employee 1
+org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8080/employees/1": null
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.createResourceAccessException(DefaultRestClient.java:763)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:615)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchange(DefaultRestClient.java:567)
+	at org.springframework.web.client.RestClient$RequestHeadersSpec.exchange(RestClient.java:750)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.executeAndExtract(DefaultRestClient.java:896)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.body(DefaultRestClient.java:826)
+	at com.Auditing_Tutorial.demo.client.impl.EmployeeClientImpl.getEmployeeById(EmployeeClientImpl.java:68)
+	at com.Auditing_Tutorial.demo.DemoApplicationTests.getEmployeeById(DemoApplicationTests.java:30)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:701)
+	at org.junit.platform.commons.support.ReflectionSupport.invokeMethod(ReflectionSupport.java:502)
+	at org.junit.jupiter.engine.support.MethodReflectionUtils.invoke(MethodReflectionUtils.java:45)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:61)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:124)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:163)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:148)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:123)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:105)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:99)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:66)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:47)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:39)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:104)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:98)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invokeVoid(InterceptingExecutableInvoker.java:71)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$0(TestMethodTestDescriptor.java:219)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:215)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:157)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:70)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:176)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:36)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:52)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.executeEngine(EngineExecutionOrchestrator.java:246)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.failOrExecuteEngine(EngineExecutionOrchestrator.java:218)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:179)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:66)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:157)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:65)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:125)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:93)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:48)
+	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$0(InterceptingLauncher.java:41)
+	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25)
+	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:40)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:48)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:67)
+	at com.intellij.junit6.JUnit6IdeaTestRunner.startRunnerWithArgs(JUnit6IdeaTestRunner.java:67)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:237)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:58)
+Caused by: java.net.ConnectException
+	at java.net.http/jdk.internal.net.http.common.Utils.toConnectException(Utils.java:1070)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:223)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.checkRetryConnect(PlainHttpConnection.java:277)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$0(PlainHttpConnection.java:235)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:955)
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire$$$capture(CompletableFuture.java:932)
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:531)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run$$$capture(CompletableFuture.java:1794)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: java.nio.channels.ClosedChannelException
+	at java.base/sun.nio.ch.SocketChannelImpl.ensureOpen(SocketChannelImpl.java:204)
+	at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:942)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:211)
+	... 11 common frames omitted
+2026-02-19 11:42:47 ERROR c.A.d.c.i.EmployeeClientImpl - >>>>>>>>Error creating employee
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:8080/employees": null
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.createResourceAccessException(DefaultRestClient.java:763)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:615)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchange(DefaultRestClient.java:567)
+	at org.springframework.web.client.RestClient$RequestHeadersSpec.exchange(RestClient.java:750)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.executeAndExtract(DefaultRestClient.java:896)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.body(DefaultRestClient.java:826)
+	at com.Auditing_Tutorial.demo.client.impl.EmployeeClientImpl.createNewEmployee(EmployeeClientImpl.java:92)
+	at com.Auditing_Tutorial.demo.DemoApplicationTests.createNewEmployeeTest(DemoApplicationTests.java:40)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:701)
+	at org.junit.platform.commons.support.ReflectionSupport.invokeMethod(ReflectionSupport.java:502)
+	at org.junit.jupiter.engine.support.MethodReflectionUtils.invoke(MethodReflectionUtils.java:45)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:61)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:124)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:163)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:148)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:123)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:105)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:99)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:66)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:47)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:39)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:104)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:98)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invokeVoid(InterceptingExecutableInvoker.java:71)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$0(TestMethodTestDescriptor.java:219)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:215)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:157)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:70)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:176)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:36)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:52)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.executeEngine(EngineExecutionOrchestrator.java:246)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.failOrExecuteEngine(EngineExecutionOrchestrator.java:218)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:179)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:66)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:157)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:65)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:125)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:93)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:48)
+	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$0(InterceptingLauncher.java:41)
+	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25)
+	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:40)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:48)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:67)
+	at com.intellij.junit6.JUnit6IdeaTestRunner.startRunnerWithArgs(JUnit6IdeaTestRunner.java:67)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:237)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:58)
+Caused by: java.net.ConnectException
+	at java.net.http/jdk.internal.net.http.common.Utils.toConnectException(Utils.java:1070)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:223)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.checkRetryConnect(PlainHttpConnection.java:277)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$0(PlainHttpConnection.java:235)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:955)
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire$$$capture(CompletableFuture.java:932)
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:531)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run$$$capture(CompletableFuture.java:1794)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: java.nio.channels.ClosedChannelException
+	at java.base/sun.nio.ch.SocketChannelImpl.ensureOpen(SocketChannelImpl.java:204)
+	at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:942)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:211)
+	... 11 common frames omitted
+2026-02-19 11:42:47 INFO  c.A.d.c.i.EmployeeClientImpl - >>> Trying  to retrieve all the employee in getAllEmplooyee
+2026-02-19 11:42:47 ERROR c.A.d.c.i.EmployeeClientImpl - Error while calling getAllEmployee
+org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8080/employees": null
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.createResourceAccessException(DefaultRestClient.java:763)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:615)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchange(DefaultRestClient.java:567)
+	at org.springframework.web.client.RestClient$RequestHeadersSpec.exchange(RestClient.java:750)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.executeAndExtract(DefaultRestClient.java:896)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.body(DefaultRestClient.java:826)
+	at com.Auditing_Tutorial.demo.client.impl.EmployeeClientImpl.getAllEmployees(EmployeeClientImpl.java:49)
+	at com.Auditing_Tutorial.demo.DemoApplicationTests.getAllEmployees(DemoApplicationTests.java:24)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:701)
+	at org.junit.platform.commons.support.ReflectionSupport.invokeMethod(ReflectionSupport.java:502)
+	at org.junit.jupiter.engine.support.MethodReflectionUtils.invoke(MethodReflectionUtils.java:45)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:61)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:124)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:163)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:148)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:123)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:105)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:99)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:66)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:47)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:39)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:104)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:98)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invokeVoid(InterceptingExecutableInvoker.java:71)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$0(TestMethodTestDescriptor.java:219)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:215)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:157)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:70)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:176)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:36)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:52)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.executeEngine(EngineExecutionOrchestrator.java:246)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.failOrExecuteEngine(EngineExecutionOrchestrator.java:218)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:179)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:66)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:157)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:65)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:125)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:93)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:48)
+	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$0(InterceptingLauncher.java:41)
+	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25)
+	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:40)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:48)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:67)
+	at com.intellij.junit6.JUnit6IdeaTestRunner.startRunnerWithArgs(JUnit6IdeaTestRunner.java:67)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:237)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:58)
+Caused by: java.net.ConnectException
+	at java.net.http/jdk.internal.net.http.common.Utils.toConnectException(Utils.java:1070)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:223)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.checkRetryConnect(PlainHttpConnection.java:277)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$0(PlainHttpConnection.java:235)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:955)
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire$$$capture(CompletableFuture.java:932)
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:531)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run$$$capture(CompletableFuture.java:1794)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: java.nio.channels.ClosedChannelException
+	at java.base/sun.nio.ch.SocketChannelImpl.ensureOpen(SocketChannelImpl.java:204)
+	at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:942)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:211)
+	... 11 common frames omitted
+2026-02-19 11:42:47 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-19 11:42:47 INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-02-19 11:42:47 INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-02-19 11:42:52 INFO  c.A.d.DemoApplicationTests - Starting DemoApplicationTests using Java 25.0.1 with PID 72108 (started by Mayank Mishra in C:\Users\Mayank Mishra\Downloads\demo (3)\Auditing_Spring_boot)
+2026-02-19 11:42:52 INFO  c.A.d.DemoApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-02-19 11:42:53 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-19 11:42:53 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 37 ms. Found 1 JPA repository interface.
+2026-02-19 11:42:53 INFO  o.h.o.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-02-19 11:42:54 INFO  o.h.o.core - HHH000001: Hibernate ORM core version 7.2.1.Final
+2026-02-19 11:42:54 INFO  o.h.e.b.i.EnversServiceImpl - Envers integration enabled? : true
+2026-02-19 11:42:54 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-19 11:42:54 INFO  c.z.h.HikariDataSource - HikariPool-1 - Starting...
+2026-02-19 11:42:55 INFO  c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@70869678
+2026-02-19 11:42:55 INFO  c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+2026-02-19 11:42:55 WARN  o.h.o.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-19 11:42:55 INFO  o.h.o.c.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/prod_ready_features?useSSL=false&serverTimezone=UTC]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.44
+	Default catalog/schema: prod_ready_features/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-19 11:42:55 INFO  o.h.e.c.i.m.AuditMetadataGenerator - Adding properties for entity: com.Auditing_Tutorial.demo.entity.PostEntity
+2026-02-19 11:42:55 INFO  c.A.d.DemoApplication - Starting DemoApplication using Java 25.0.1 with PID 47620 (C:\Users\Mayank Mishra\Downloads\demo (3)\Auditing_Spring_boot\target\classes started by Mayank Mishra in C:\Users\Mayank Mishra\Downloads\demo (3)\Auditing_Spring_boot)
+2026-02-19 11:42:55 INFO  c.A.d.DemoApplication - No active profile set, falling back to 1 default profile: "default"
+2026-02-19 11:42:55 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-02-19 11:42:55 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-02-19 11:42:56 INFO  o.h.o.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-19 11:42:56 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-19 11:42:56 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-19 11:42:56 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 44 ms. Found 1 JPA repository interface.
+2026-02-19 11:42:56 INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-19 11:42:56 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-19 11:42:56 INFO  o.s.b.t.TomcatWebServer - Tomcat initialized with port 9000 (http)
+2026-02-19 11:42:56 INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9000"]
+2026-02-19 11:42:56 INFO  o.a.c.c.StandardService - Starting service [Tomcat]
+2026-02-19 11:42:56 INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-02-19 11:42:56 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1484 ms
+2026-02-19 11:42:57 INFO  o.h.o.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-02-19 11:42:57 INFO  o.s.b.a.e.w.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2026-02-19 11:42:57 INFO  o.h.o.core - HHH000001: Hibernate ORM core version 7.2.1.Final
+2026-02-19 11:42:57 INFO  c.A.d.DemoApplicationTests - Started DemoApplicationTests in 5.022 seconds (process running for 6.408)
+2026-02-19 11:42:57 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-19 11:42:57 INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-02-19 11:42:57 INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-02-19 11:42:57 INFO  o.h.e.b.i.EnversServiceImpl - Envers integration enabled? : true
+2026-02-19 11:42:57 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-19 11:42:57 INFO  c.z.h.HikariDataSource - HikariPool-1 - Starting...
+2026-02-19 11:42:57 INFO  c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7b3fd723
+2026-02-19 11:42:57 INFO  c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+2026-02-19 11:42:57 WARN  o.h.o.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-19 11:42:57 INFO  o.h.o.c.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/prod_ready_features?useSSL=false&serverTimezone=UTC]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.44
+	Default catalog/schema: prod_ready_features/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-19 11:42:58 INFO  o.h.e.c.i.m.AuditMetadataGenerator - Adding properties for entity: com.Auditing_Tutorial.demo.entity.PostEntity
+2026-02-19 11:42:58 INFO  o.h.o.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-19 11:42:58 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-19 11:42:58 INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-19 11:42:59 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-19 11:42:59 INFO  o.s.b.a.e.w.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2026-02-19 11:42:59 INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9000"]
+2026-02-19 11:42:59 INFO  o.s.b.t.TomcatWebServer - Tomcat started on port 9000 (http) with context path '/'
+2026-02-19 11:42:59 INFO  c.A.d.DemoApplication - Started DemoApplication in 4.38 seconds (process running for 4.969)
+2026-02-19 11:44:47 INFO  o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-19 11:44:47 INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-02-19 11:44:47 INFO  o.s.w.s.DispatcherServlet - Completed initialization in 1 ms
+2026-02-19 11:47:26 INFO  o.s.b.t.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-19 11:47:26 INFO  o.s.b.t.GracefulShutdown - Graceful shutdown complete
+2026-02-19 11:47:26 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-19 11:47:26 INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-02-19 11:47:26 INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-02-19 11:47:29 INFO  c.A.d.DemoApplication - Starting DemoApplication using Java 25.0.1 with PID 24592 (C:\Users\Mayank Mishra\Downloads\demo (3)\Auditing_Spring_boot\target\classes started by Mayank Mishra in C:\Users\Mayank Mishra\Downloads\demo (3)\Auditing_Spring_boot)
+2026-02-19 11:47:29 INFO  c.A.d.DemoApplication - No active profile set, falling back to 1 default profile: "default"
+2026-02-19 11:47:29 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-02-19 11:47:29 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-02-19 11:47:30 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-19 11:47:30 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 59 ms. Found 1 JPA repository interface.
+2026-02-19 11:47:31 INFO  o.s.b.t.TomcatWebServer - Tomcat initialized with port 9000 (http)
+2026-02-19 11:47:31 INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9000"]
+2026-02-19 11:47:31 INFO  o.a.c.c.StandardService - Starting service [Tomcat]
+2026-02-19 11:47:31 INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-02-19 11:47:31 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1997 ms
+2026-02-19 11:47:31 INFO  o.h.o.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-02-19 11:47:31 INFO  o.h.o.core - HHH000001: Hibernate ORM core version 7.2.1.Final
+2026-02-19 11:47:31 INFO  o.h.e.b.i.EnversServiceImpl - Envers integration enabled? : true
+2026-02-19 11:47:32 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-19 11:47:32 INFO  c.z.h.HikariDataSource - HikariPool-1 - Starting...
+2026-02-19 11:47:32 INFO  c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6ccdfe03
+2026-02-19 11:47:32 INFO  c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+2026-02-19 11:47:32 WARN  o.h.o.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-19 11:47:32 INFO  o.h.o.c.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/prod_ready_features?useSSL=false&serverTimezone=UTC]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.44
+	Default catalog/schema: prod_ready_features/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-19 11:47:32 INFO  o.h.e.c.i.m.AuditMetadataGenerator - Adding properties for entity: com.Auditing_Tutorial.demo.entity.PostEntity
+2026-02-19 11:47:33 INFO  o.h.o.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-19 11:47:34 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-19 11:47:34 INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-19 11:47:34 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-19 11:47:35 INFO  o.s.b.a.e.w.EndpointLinksResolver - Exposing 13 endpoints beneath base path '/actuator'
+2026-02-19 11:47:35 INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9000"]
+2026-02-19 11:47:35 INFO  o.s.b.t.TomcatWebServer - Tomcat started on port 9000 (http) with context path '/'
+2026-02-19 11:47:35 INFO  c.A.d.DemoApplication - Started DemoApplication in 7.037 seconds (process running for 7.688)
+2026-02-19 11:47:37 INFO  o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-19 11:47:37 INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-02-19 11:47:37 INFO  o.s.w.s.DispatcherServlet - Completed initialization in 3 ms
+2026-02-19 11:52:07 INFO  o.s.b.t.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-19 11:52:07 INFO  o.s.b.t.GracefulShutdown - Graceful shutdown complete
+2026-02-19 11:52:07 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-19 11:52:07 INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-02-19 11:52:07 INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-02-19 11:52:10 INFO  c.A.d.DemoApplication - Starting DemoApplication using Java 25.0.1 with PID 34196 (C:\Users\Mayank Mishra\Downloads\demo (3)\Auditing_Spring_boot\target\classes started by Mayank Mishra in C:\Users\Mayank Mishra\Downloads\demo (3)\Auditing_Spring_boot)
+2026-02-19 11:52:10 INFO  c.A.d.DemoApplication - No active profile set, falling back to 1 default profile: "default"
+2026-02-19 11:52:10 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-02-19 11:52:10 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-02-19 11:52:11 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-19 11:52:11 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 96 ms. Found 1 JPA repository interface.
+2026-02-19 11:52:12 INFO  o.s.b.t.TomcatWebServer - Tomcat initialized with port 9000 (http)
+2026-02-19 11:52:12 INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9000"]
+2026-02-19 11:52:12 INFO  o.a.c.c.StandardService - Starting service [Tomcat]
+2026-02-19 11:52:12 INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-02-19 11:52:12 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 2308 ms
+2026-02-19 11:52:13 INFO  o.h.o.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-02-19 11:52:13 INFO  o.h.o.core - HHH000001: Hibernate ORM core version 7.2.1.Final
+2026-02-19 11:52:13 INFO  o.h.e.b.i.EnversServiceImpl - Envers integration enabled? : true
+2026-02-19 11:52:14 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-19 11:52:14 INFO  c.z.h.HikariDataSource - HikariPool-1 - Starting...
+2026-02-19 11:52:14 INFO  c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2c4bbd02
+2026-02-19 11:52:14 INFO  c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+2026-02-19 11:52:14 WARN  o.h.o.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-19 11:52:14 INFO  o.h.o.c.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/prod_ready_features?useSSL=false&serverTimezone=UTC]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.44
+	Default catalog/schema: prod_ready_features/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-19 11:52:14 INFO  o.h.e.c.i.m.AuditMetadataGenerator - Adding properties for entity: com.Auditing_Tutorial.demo.entity.PostEntity
+2026-02-19 11:52:15 INFO  o.h.o.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-19 11:52:15 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-19 11:52:16 INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-19 11:52:16 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-19 11:52:17 INFO  o.s.b.a.e.w.EndpointLinksResolver - Exposing 13 endpoints beneath base path '/actuator'
+2026-02-19 11:52:17 INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9000"]
+2026-02-19 11:52:17 INFO  o.s.b.t.TomcatWebServer - Tomcat started on port 9000 (http) with context path '/'
+2026-02-19 11:52:17 INFO  c.A.d.DemoApplication - Started DemoApplication in 7.176 seconds (process running for 7.695)
+2026-02-19 11:52:26 INFO  o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-19 11:52:26 INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-02-19 11:52:26 INFO  o.s.w.s.DispatcherServlet - Completed initialization in 1 ms
+2026-02-19 11:53:41 INFO  o.s.b.t.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-19 11:53:41 INFO  o.s.b.t.GracefulShutdown - Graceful shutdown complete
+2026-02-19 11:53:41 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-19 11:53:41 INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-02-19 11:53:41 INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-02-19 11:53:44 INFO  c.A.d.DemoApplication - Starting DemoApplication using Java 25.0.1 with PID 49224 (C:\Users\Mayank Mishra\Downloads\demo (3)\Auditing_Spring_boot\target\classes started by Mayank Mishra in C:\Users\Mayank Mishra\Downloads\demo (3)\Auditing_Spring_boot)
+2026-02-19 11:53:44 INFO  c.A.d.DemoApplication - No active profile set, falling back to 1 default profile: "default"
+2026-02-19 11:53:44 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-02-19 11:53:44 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-02-19 11:53:45 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-19 11:53:45 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 52 ms. Found 1 JPA repository interface.
+2026-02-19 11:53:45 INFO  o.s.b.t.TomcatWebServer - Tomcat initialized with port 9000 (http)
+2026-02-19 11:53:45 INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9000"]
+2026-02-19 11:53:45 INFO  o.a.c.c.StandardService - Starting service [Tomcat]
+2026-02-19 11:53:45 INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-02-19 11:53:45 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1720 ms
+2026-02-19 11:53:46 INFO  o.h.o.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-02-19 11:53:46 INFO  o.h.o.core - HHH000001: Hibernate ORM core version 7.2.1.Final
+2026-02-19 11:53:46 INFO  o.h.e.b.i.EnversServiceImpl - Envers integration enabled? : true
+2026-02-19 11:53:47 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-19 11:53:47 INFO  c.z.h.HikariDataSource - HikariPool-1 - Starting...
+2026-02-19 11:53:47 INFO  c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3f4f0025
+2026-02-19 11:53:47 INFO  c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+2026-02-19 11:53:47 WARN  o.h.o.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-19 11:53:47 INFO  o.h.o.c.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/prod_ready_features?useSSL=false&serverTimezone=UTC]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.44
+	Default catalog/schema: prod_ready_features/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-19 11:53:47 INFO  o.h.e.c.i.m.AuditMetadataGenerator - Adding properties for entity: com.Auditing_Tutorial.demo.entity.PostEntity
+2026-02-19 11:53:48 INFO  o.h.o.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-19 11:53:48 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-19 11:53:48 INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-19 11:53:49 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-19 11:53:49 INFO  o.s.b.a.e.w.EndpointLinksResolver - Exposing 13 endpoints beneath base path '/actuator'
+2026-02-19 11:53:49 INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9000"]
+2026-02-19 11:53:49 INFO  o.s.b.t.TomcatWebServer - Tomcat started on port 9000 (http) with context path '/'
+2026-02-19 11:53:49 INFO  c.A.d.DemoApplication - Started DemoApplication in 6.074 seconds (process running for 6.644)
+2026-02-19 11:53:49 INFO  o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-19 11:53:49 INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-02-19 11:53:49 INFO  o.s.w.s.DispatcherServlet - Completed initialization in 1 ms
+2026-02-19 11:54:59 INFO  o.s.b.t.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-19 11:54:59 INFO  o.s.b.t.GracefulShutdown - Graceful shutdown complete
+2026-02-19 11:54:59 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-19 11:54:59 INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-02-19 11:54:59 INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-02-19 11:55:02 INFO  c.A.d.DemoApplication - Starting DemoApplication using Java 25.0.1 with PID 3688 (C:\Users\Mayank Mishra\Downloads\demo (3)\Auditing_Spring_boot\target\classes started by Mayank Mishra in C:\Users\Mayank Mishra\Downloads\demo (3)\Auditing_Spring_boot)
+2026-02-19 11:55:02 INFO  c.A.d.DemoApplication - No active profile set, falling back to 1 default profile: "default"
+2026-02-19 11:55:02 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-02-19 11:55:02 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-02-19 11:55:02 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-19 11:55:03 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 51 ms. Found 1 JPA repository interface.
+2026-02-19 11:55:03 INFO  o.s.b.t.TomcatWebServer - Tomcat initialized with port 9000 (http)
+2026-02-19 11:55:03 INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9000"]
+2026-02-19 11:55:03 INFO  o.a.c.c.StandardService - Starting service [Tomcat]
+2026-02-19 11:55:03 INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-02-19 11:55:03 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1768 ms
+2026-02-19 11:55:04 INFO  o.h.o.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-02-19 11:55:04 INFO  o.h.o.core - HHH000001: Hibernate ORM core version 7.2.1.Final
+2026-02-19 11:55:04 INFO  o.h.e.b.i.EnversServiceImpl - Envers integration enabled? : true
+2026-02-19 11:55:05 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-19 11:55:05 INFO  c.z.h.HikariDataSource - HikariPool-1 - Starting...
+2026-02-19 11:55:05 INFO  c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2b937fe1
+2026-02-19 11:55:05 INFO  c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+2026-02-19 11:55:05 WARN  o.h.o.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-19 11:55:05 INFO  o.h.o.c.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/prod_ready_features?useSSL=false&serverTimezone=UTC]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.44
+	Default catalog/schema: prod_ready_features/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-19 11:55:05 INFO  o.h.e.c.i.m.AuditMetadataGenerator - Adding properties for entity: com.Auditing_Tutorial.demo.entity.PostEntity
+2026-02-19 11:55:06 INFO  o.h.o.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-19 11:55:06 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-19 11:55:07 INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-19 11:55:07 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-19 11:55:08 INFO  o.s.b.a.e.w.EndpointLinksResolver - Exposing 13 endpoints beneath base path '/actuator'
+2026-02-19 11:55:08 INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9000"]
+2026-02-19 11:55:08 INFO  o.s.b.t.TomcatWebServer - Tomcat started on port 9000 (http) with context path '/'
+2026-02-19 11:55:08 INFO  c.A.d.DemoApplication - Started DemoApplication in 6.575 seconds (process running for 7.145)
+2026-02-19 11:55:08 INFO  o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-19 11:55:08 INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-02-19 11:55:08 INFO  o.s.w.s.DispatcherServlet - Completed initialization in 1 ms
+2026-02-19 11:56:39 INFO  o.s.b.t.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-19 11:56:39 INFO  o.s.b.t.GracefulShutdown - Graceful shutdown complete
+2026-02-19 11:56:39 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-19 11:56:39 INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-02-19 11:56:39 INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-02-19 11:56:41 INFO  c.A.d.DemoApplication - Starting DemoApplication using Java 25.0.1 with PID 7908 (C:\Users\Mayank Mishra\Downloads\demo (3)\Auditing_Spring_boot\target\classes started by Mayank Mishra in C:\Users\Mayank Mishra\Downloads\demo (3)\Auditing_Spring_boot)
+2026-02-19 11:56:41 INFO  c.A.d.DemoApplication - No active profile set, falling back to 1 default profile: "default"
+2026-02-19 11:56:41 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-02-19 11:56:41 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-02-19 11:56:42 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-19 11:56:42 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 44 ms. Found 1 JPA repository interface.
+2026-02-19 11:56:43 INFO  o.s.b.t.TomcatWebServer - Tomcat initialized with port 9000 (http)
+2026-02-19 11:56:43 INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9000"]
+2026-02-19 11:56:43 INFO  o.a.c.c.StandardService - Starting service [Tomcat]
+2026-02-19 11:56:43 INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-02-19 11:56:43 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1658 ms
+2026-02-19 11:56:43 INFO  o.h.o.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-02-19 11:56:43 INFO  o.h.o.core - HHH000001: Hibernate ORM core version 7.2.1.Final
+2026-02-19 11:56:43 INFO  o.h.e.b.i.EnversServiceImpl - Envers integration enabled? : true
+2026-02-19 11:56:44 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-19 11:56:44 INFO  c.z.h.HikariDataSource - HikariPool-1 - Starting...
+2026-02-19 11:56:44 INFO  c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2b937fe1
+2026-02-19 11:56:44 INFO  c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+2026-02-19 11:56:44 WARN  o.h.o.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-19 11:56:44 INFO  o.h.o.c.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/prod_ready_features?useSSL=false&serverTimezone=UTC]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.44
+	Default catalog/schema: prod_ready_features/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-19 11:56:44 INFO  o.h.e.c.i.m.AuditMetadataGenerator - Adding properties for entity: com.Auditing_Tutorial.demo.entity.PostEntity
+2026-02-19 11:56:45 INFO  o.h.o.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-19 11:56:45 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-19 11:56:45 INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-19 11:56:46 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-19 11:56:46 INFO  o.s.b.a.e.w.EndpointLinksResolver - Exposing 13 endpoints beneath base path '/actuator'
+2026-02-19 11:56:46 INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9000"]
+2026-02-19 11:56:46 INFO  o.s.b.t.TomcatWebServer - Tomcat started on port 9000 (http) with context path '/'
+2026-02-19 11:56:46 INFO  c.A.d.DemoApplication - Started DemoApplication in 5.692 seconds (process running for 6.214)
+2026-02-19 11:56:50 INFO  o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-19 11:56:50 INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-02-19 11:56:50 INFO  o.s.w.s.DispatcherServlet - Completed initialization in 1 ms
+2026-02-19 11:57:00 INFO  o.s.b.t.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-19 11:57:00 INFO  o.s.b.t.GracefulShutdown - Graceful shutdown complete
+2026-02-19 11:57:00 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-19 11:57:00 INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-02-19 11:57:00 INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-02-19 11:57:03 INFO  c.A.d.DemoApplication - Starting DemoApplication using Java 25.0.1 with PID 23372 (C:\Users\Mayank Mishra\Downloads\demo (3)\Auditing_Spring_boot\target\classes started by Mayank Mishra in C:\Users\Mayank Mishra\Downloads\demo (3)\Auditing_Spring_boot)
+2026-02-19 11:57:03 INFO  c.A.d.DemoApplication - No active profile set, falling back to 1 default profile: "default"
+2026-02-19 11:57:03 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-02-19 11:57:03 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-02-19 11:57:04 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-19 11:57:04 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 47 ms. Found 1 JPA repository interface.
+2026-02-19 11:57:04 INFO  o.s.b.t.TomcatWebServer - Tomcat initialized with port 9000 (http)
+2026-02-19 11:57:04 INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9000"]
+2026-02-19 11:57:04 INFO  o.a.c.c.StandardService - Starting service [Tomcat]
+2026-02-19 11:57:04 INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-02-19 11:57:04 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1807 ms
+2026-02-19 11:57:05 INFO  o.h.o.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-02-19 11:57:05 INFO  o.h.o.core - HHH000001: Hibernate ORM core version 7.2.1.Final
+2026-02-19 11:57:05 INFO  o.h.e.b.i.EnversServiceImpl - Envers integration enabled? : true
+2026-02-19 11:57:05 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-19 11:57:05 INFO  c.z.h.HikariDataSource - HikariPool-1 - Starting...
+2026-02-19 11:57:05 INFO  c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2b937fe1
+2026-02-19 11:57:05 INFO  c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+2026-02-19 11:57:06 WARN  o.h.o.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-19 11:57:06 INFO  o.h.o.c.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/prod_ready_features?useSSL=false&serverTimezone=UTC]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.44
+	Default catalog/schema: prod_ready_features/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-19 11:57:06 INFO  o.h.e.c.i.m.AuditMetadataGenerator - Adding properties for entity: com.Auditing_Tutorial.demo.entity.PostEntity
+2026-02-19 11:57:07 INFO  o.h.o.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-19 11:57:07 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-19 11:57:07 INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-19 11:57:07 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-19 11:57:08 INFO  o.s.b.a.e.w.EndpointLinksResolver - Exposing 13 endpoints beneath base path '/actuator'
+2026-02-19 11:57:08 INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9000"]
+2026-02-19 11:57:08 INFO  o.s.b.t.TomcatWebServer - Tomcat started on port 9000 (http) with context path '/'
+2026-02-19 11:57:08 INFO  c.A.d.DemoApplication - Started DemoApplication in 5.65 seconds (process running for 6.201)
+2026-02-19 11:57:12 INFO  o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-19 11:57:12 INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-02-19 11:57:12 INFO  o.s.w.s.DispatcherServlet - Completed initialization in 1 ms
+2026-02-19 12:12:24 INFO  o.s.b.t.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-19 12:12:24 INFO  o.s.b.t.GracefulShutdown - Graceful shutdown complete
+2026-02-19 12:12:24 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-19 12:12:24 INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-02-19 12:12:24 INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-02-19 12:12:26 INFO  c.A.d.DemoApplication - Starting DemoApplication using Java 25.0.1 with PID 46444 (C:\Users\Mayank Mishra\Downloads\demo (3)\Auditing_Spring_boot\target\classes started by Mayank Mishra in C:\Users\Mayank Mishra\Downloads\demo (3)\Auditing_Spring_boot)
+2026-02-19 12:12:26 INFO  c.A.d.DemoApplication - No active profile set, falling back to 1 default profile: "default"
+2026-02-19 12:12:26 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-02-19 12:12:26 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-02-19 12:12:27 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-19 12:12:28 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 90 ms. Found 1 JPA repository interface.
+2026-02-19 12:12:28 INFO  o.s.b.t.TomcatWebServer - Tomcat initialized with port 9000 (http)
+2026-02-19 12:12:28 INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9000"]
+2026-02-19 12:12:28 INFO  o.a.c.c.StandardService - Starting service [Tomcat]
+2026-02-19 12:12:28 INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-02-19 12:12:28 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1851 ms
+2026-02-19 12:12:29 INFO  o.h.o.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-02-19 12:12:29 INFO  o.h.o.core - HHH000001: Hibernate ORM core version 7.2.1.Final
+2026-02-19 12:12:29 INFO  o.h.e.b.i.EnversServiceImpl - Envers integration enabled? : true
+2026-02-19 12:12:29 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-19 12:12:29 INFO  c.z.h.HikariDataSource - HikariPool-1 - Starting...
+2026-02-19 12:12:30 INFO  c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@412799e7
+2026-02-19 12:12:30 INFO  c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+2026-02-19 12:12:30 WARN  o.h.o.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-19 12:12:30 INFO  o.h.o.c.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/prod_ready_features?useSSL=false&serverTimezone=UTC]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.44
+	Default catalog/schema: prod_ready_features/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-19 12:12:30 INFO  o.h.e.c.i.m.AuditMetadataGenerator - Adding properties for entity: com.Auditing_Tutorial.demo.entity.PostEntity
+2026-02-19 12:12:32 INFO  o.h.o.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-19 12:12:32 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-19 12:12:32 INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-19 12:12:32 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-19 12:12:33 INFO  o.s.b.a.e.w.EndpointLinksResolver - Exposing 13 endpoints beneath base path '/management'
+2026-02-19 12:12:33 INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9000"]
+2026-02-19 12:12:33 INFO  o.s.b.t.TomcatWebServer - Tomcat started on port 9000 (http) with context path '/'
+2026-02-19 12:12:33 INFO  c.A.d.DemoApplication - Started DemoApplication in 7.233 seconds (process running for 7.88)
+2026-02-19 12:13:02 INFO  o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-19 12:13:02 INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-02-19 12:13:02 INFO  o.s.w.s.DispatcherServlet - Completed initialization in 3 ms
+2026-02-19 12:14:55 INFO  o.s.b.t.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-19 12:14:55 INFO  o.s.b.t.GracefulShutdown - Graceful shutdown complete
+2026-02-19 12:14:55 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-19 12:14:55 INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-02-19 12:14:55 INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-02-19 12:14:57 INFO  c.A.d.DemoApplication - Starting DemoApplication using Java 25.0.1 with PID 50484 (C:\Users\Mayank Mishra\Downloads\demo (3)\Auditing_Spring_boot\target\classes started by Mayank Mishra in C:\Users\Mayank Mishra\Downloads\demo (3)\Auditing_Spring_boot)
+2026-02-19 12:14:57 INFO  c.A.d.DemoApplication - No active profile set, falling back to 1 default profile: "default"
+2026-02-19 12:14:57 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-02-19 12:14:57 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-02-19 12:14:58 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-19 12:14:58 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 51 ms. Found 1 JPA repository interface.
+2026-02-19 12:14:59 INFO  o.s.b.t.TomcatWebServer - Tomcat initialized with port 9000 (http)
+2026-02-19 12:14:59 INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9000"]
+2026-02-19 12:14:59 INFO  o.a.c.c.StandardService - Starting service [Tomcat]
+2026-02-19 12:14:59 INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-02-19 12:14:59 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1836 ms
+2026-02-19 12:14:59 INFO  o.h.o.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-02-19 12:14:59 INFO  o.h.o.core - HHH000001: Hibernate ORM core version 7.2.1.Final
+2026-02-19 12:14:59 INFO  o.h.e.b.i.EnversServiceImpl - Envers integration enabled? : true
+2026-02-19 12:15:00 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-19 12:15:00 INFO  c.z.h.HikariDataSource - HikariPool-1 - Starting...
+2026-02-19 12:15:00 INFO  c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@412799e7
+2026-02-19 12:15:00 INFO  c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+2026-02-19 12:15:00 WARN  o.h.o.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-19 12:15:00 INFO  o.h.o.c.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/prod_ready_features?useSSL=false&serverTimezone=UTC]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.44
+	Default catalog/schema: prod_ready_features/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-19 12:15:00 INFO  o.h.e.c.i.m.AuditMetadataGenerator - Adding properties for entity: com.Auditing_Tutorial.demo.entity.PostEntity
+2026-02-19 12:15:02 INFO  o.h.o.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-19 12:15:02 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-19 12:15:02 INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-19 12:15:02 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-19 12:15:03 INFO  o.s.b.a.e.w.EndpointLinksResolver - Exposing 13 endpoints beneath base path '/actuator'
+2026-02-19 12:15:03 INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9000"]
+2026-02-19 12:15:03 INFO  o.s.b.t.TomcatWebServer - Tomcat started on port 9000 (http) with context path '/'
+2026-02-19 12:15:03 INFO  c.A.d.DemoApplication - Started DemoApplication in 6.362 seconds (process running for 6.951)
+2026-02-19 12:15:10 INFO  o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-19 12:15:10 INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-02-19 12:15:10 INFO  o.s.w.s.DispatcherServlet - Completed initialization in 2 ms
+2026-02-19 12:15:42 INFO  o.s.b.t.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-19 12:15:42 INFO  o.s.b.t.GracefulShutdown - Graceful shutdown complete
+2026-02-19 12:15:42 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-19 12:15:42 INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-02-19 12:15:42 INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-02-19 12:15:44 INFO  c.A.d.DemoApplication - Starting DemoApplication using Java 25.0.1 with PID 69036 (C:\Users\Mayank Mishra\Downloads\demo (3)\Auditing_Spring_boot\target\classes started by Mayank Mishra in C:\Users\Mayank Mishra\Downloads\demo (3)\Auditing_Spring_boot)
+2026-02-19 12:15:44 INFO  c.A.d.DemoApplication - No active profile set, falling back to 1 default profile: "default"
+2026-02-19 12:15:44 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-02-19 12:15:44 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-02-19 12:15:45 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-19 12:15:45 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 44 ms. Found 1 JPA repository interface.
+2026-02-19 12:15:46 INFO  o.s.b.t.TomcatWebServer - Tomcat initialized with port 9000 (http)
+2026-02-19 12:15:46 INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9000"]
+2026-02-19 12:15:46 INFO  o.a.c.c.StandardService - Starting service [Tomcat]
+2026-02-19 12:15:46 INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-02-19 12:15:46 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 2281 ms
+2026-02-19 12:15:46 INFO  o.h.o.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-02-19 12:15:46 INFO  o.h.o.core - HHH000001: Hibernate ORM core version 7.2.1.Final
+2026-02-19 12:15:47 INFO  o.h.e.b.i.EnversServiceImpl - Envers integration enabled? : true
+2026-02-19 12:15:47 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-19 12:15:47 INFO  c.z.h.HikariDataSource - HikariPool-1 - Starting...
+2026-02-19 12:15:48 INFO  c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@412799e7
+2026-02-19 12:15:48 INFO  c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+2026-02-19 12:15:48 WARN  o.h.o.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-19 12:15:48 INFO  o.h.o.c.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/prod_ready_features?useSSL=false&serverTimezone=UTC]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.44
+	Default catalog/schema: prod_ready_features/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-19 12:15:48 INFO  o.h.e.c.i.m.AuditMetadataGenerator - Adding properties for entity: com.Auditing_Tutorial.demo.entity.PostEntity
+2026-02-19 12:15:49 INFO  o.h.o.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-19 12:15:49 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-19 12:15:49 INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-19 12:15:49 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-19 12:15:50 INFO  o.s.b.a.e.w.EndpointLinksResolver - Exposing 13 endpoints beneath base path '/actuator'
+2026-02-19 12:15:50 INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9000"]
+2026-02-19 12:15:50 INFO  o.s.b.t.TomcatWebServer - Tomcat started on port 9000 (http) with context path '/'
+2026-02-19 12:15:50 INFO  c.A.d.DemoApplication - Started DemoApplication in 7.066 seconds (process running for 7.71)
+2026-02-19 12:16:45 INFO  o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-19 12:16:45 INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-02-19 12:16:45 INFO  o.s.w.s.DispatcherServlet - Completed initialization in 3 ms
+2026-02-19 12:24:26 INFO  o.s.b.t.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-19 12:24:26 INFO  o.s.b.t.GracefulShutdown - Graceful shutdown complete
+2026-02-19 12:24:26 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-19 12:24:26 INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-02-19 12:24:26 INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-02-19 12:24:28 INFO  c.A.d.DemoApplication - Starting DemoApplication using Java 25.0.1 with PID 61040 (C:\Users\Mayank Mishra\Downloads\demo (3)\Auditing_Spring_boot\target\classes started by Mayank Mishra in C:\Users\Mayank Mishra\Downloads\demo (3)\Auditing_Spring_boot)
+2026-02-19 12:24:28 INFO  c.A.d.DemoApplication - No active profile set, falling back to 1 default profile: "default"
+2026-02-19 12:24:28 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-02-19 12:24:28 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-02-19 12:24:29 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-19 12:24:29 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 75 ms. Found 1 JPA repository interface.
+2026-02-19 12:24:30 INFO  o.s.b.t.TomcatWebServer - Tomcat initialized with port 9000 (http)
+2026-02-19 12:24:30 INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9000"]
+2026-02-19 12:24:30 INFO  o.a.c.c.StandardService - Starting service [Tomcat]
+2026-02-19 12:24:30 INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-02-19 12:24:30 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 2335 ms
+2026-02-19 12:24:31 INFO  o.h.o.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-02-19 12:24:31 INFO  o.h.o.core - HHH000001: Hibernate ORM core version 7.2.1.Final
+2026-02-19 12:24:31 INFO  o.h.e.b.i.EnversServiceImpl - Envers integration enabled? : true
+2026-02-19 12:24:31 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-19 12:24:32 INFO  c.z.h.HikariDataSource - HikariPool-1 - Starting...
+2026-02-19 12:24:32 INFO  c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@371bebed
+2026-02-19 12:24:32 INFO  c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+2026-02-19 12:24:32 WARN  o.h.o.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-19 12:24:32 INFO  o.h.o.c.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/prod_ready_features?useSSL=false&serverTimezone=UTC]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.44
+	Default catalog/schema: prod_ready_features/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-19 12:24:32 INFO  o.h.e.c.i.m.AuditMetadataGenerator - Adding properties for entity: com.Auditing_Tutorial.demo.entity.PostEntity
+2026-02-19 12:24:34 INFO  o.h.o.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-19 12:24:34 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-19 12:24:34 INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-19 12:24:35 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-19 12:24:35 INFO  o.s.b.a.e.w.EndpointLinksResolver - Exposing 13 endpoints beneath base path '/actuator'
+2026-02-19 12:24:35 INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9000"]
+2026-02-19 12:24:36 INFO  o.s.b.t.TomcatWebServer - Tomcat started on port 9000 (http) with context path '/'
+2026-02-19 12:24:36 INFO  c.A.d.DemoApplication - Started DemoApplication in 8.085 seconds (process running for 8.657)
+2026-02-19 12:24:37 INFO  o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-19 12:24:37 INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-02-19 12:24:37 INFO  o.s.w.s.DispatcherServlet - Completed initialization in 2 ms
+2026-02-19 12:37:56 WARN  c.z.h.p.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m54s669ms989µs200ns).
+2026-02-19 13:00:18 INFO  o.s.b.t.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-19 13:00:18 INFO  o.s.b.t.GracefulShutdown - Graceful shutdown complete
+2026-02-19 13:00:18 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-19 13:00:18 INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-02-19 13:00:18 INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.

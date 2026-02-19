@@ -34,8 +34,9 @@ class DemoApplicationTests {
 	@Test
 	void createNewEmployeeTest()
 	{
+
 		EmployeeDTO employeeDTO=new EmployeeDTO(null, "Mayank","mayank@gmail.com",20,
-				LocalDate.of(2020,12,12), true,"USER",13,5000.0);
+				LocalDate.of(2020,12,12), true,"USER",11,5000.0);
 		EmployeeDTO savedEmployeeDTO=employeeClient.createNewEmployee(employeeDTO);
 		System.out.println(savedEmployeeDTO);
 	}
